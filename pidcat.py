@@ -221,7 +221,7 @@ while adb.poll() is None:
     print(linebuf)
     last_tag = None # Ensure next log gets a tag printed
 
-  if owner not in pids:
+  if len(pids) > 0 and owner not in pids:
     continue
   if LOG_LEVELS_MAP[level] < min_level:
     continue
